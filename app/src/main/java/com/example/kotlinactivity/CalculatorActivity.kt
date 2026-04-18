@@ -26,4 +26,18 @@ class CalculatorActivity : AppCompatActivity() {
         return number
     }
 
+    fun calculateResult(): Double {
+        val secondOperand = parseCurrentInput()
+        var result = 0.0
+
+        when (currentOperator) {
+            "+" -> result = addNumbers(firstOperand, secondOperand)
+            "-" -> result = firstOperand - secondOperand
+            "*" -> result = firstOperand * secondOperand
+            "/" -> if (secondOperand != 0.0) result = firstOperand / secondOperand
+        }
+
+        return result
+    }
+
 }
