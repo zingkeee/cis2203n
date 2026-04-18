@@ -1,11 +1,15 @@
 package com.example.kotlinactivity
 
-fun greetUser(name: String): String {
-    return "Hello, $name! Welcome to Kotlin."
-}
+data class User(val username: String, var score: Int)
 
 fun main() {
-    for (i in 1..5) {
-        println(i)
+    val users = listOf(
+        User("Neil", 100),
+        User("Patrick", 85),
+        User("Guest", 10)
+    )
+
+    for (user in users) {
+        println("User: ${user.username} | Score: ${user.score}")
     }
 }
