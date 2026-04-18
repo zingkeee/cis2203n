@@ -5,11 +5,7 @@ fun greetUser(name: String): String {
 }
 
 fun main() {
-    var nickname: String? = null
-
-    println(nickname?.length)
-
-    nickname = "Neil"
-
-    println(nickname?.length)
+    for (i in 1..5) {
+        println(i)
+    }
 }
