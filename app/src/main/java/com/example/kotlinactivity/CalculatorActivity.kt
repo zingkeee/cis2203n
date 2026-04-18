@@ -21,4 +21,9 @@ class CalculatorActivity : AppCompatActivity() {
         return a + b
     }
 
+    fun parseCurrentInput(): Double {
+        val number = currentInput.toDoubleOrNull() ?: 0.0
+        return number
+    }
+
 }
